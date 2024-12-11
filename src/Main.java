@@ -54,11 +54,11 @@ public class Main {
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
 
-            stmt.setString(1, date); // Set the review_date
-            stmt.setString(2, review); // Set the review_text
+            stmt.setString(1, date); // Set the DATE review_date
+            stmt.setString(2, review); // Set the TEXT review
 
             int rowsAffected = stmt.executeUpdate();
-            return rowsAffected > 0; // Return true if the insert was successful
+            return rowsAffected > 0; //True if insert was successful
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -72,7 +72,7 @@ public class Main {
         String review = "";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
-            stmt.setString(1, date); // Set the review_date
+            stmt.setString(1, date); // Set the DATE review_date
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
                     review = rs.getString("review");
