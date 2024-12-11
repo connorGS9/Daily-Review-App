@@ -4,7 +4,7 @@ Database: daily_reviews
 
 Conatins 1 table: Past_Reviews
 
-            Past Reviews Has attributes: **review_date** - DATE   NOT NULL   PRIMARY KEY,
+            Past Reviews Has attributes: __review_date__ - DATE   NOT NULL   PRIMARY KEY,
                                          **review** - TEXT
 
 Potential additions: 
